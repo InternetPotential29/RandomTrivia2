@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/MainInterface.unity
+- path: Assets/Scenes/TestDragDraftQuiz.unity
   isLoaded: 1
   isActive: 1
