@@ -3,7 +3,14 @@ using System.Collections;
 
 [System.Serializable]
 
-public struct Questions{
-	public Sprite imageQuestion;
-	public int answer;
+public struct QuestionsSetA {
+	public Sprite imageQuestionSetA;
+	public int answerSetA;
+}
+
+[System.Serializable]
+
+public struct QuestionsSetB {
+	public string ImageQuestionSetB;
+	public int answerSetB;
 }

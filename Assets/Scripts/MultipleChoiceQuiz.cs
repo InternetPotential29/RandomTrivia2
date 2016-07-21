@@ -1,25 +1,49 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 public class MultipleChoiceQuiz : MonoBehaviour {
-	public Questions[] questions;
-	private List<Questions> unansweredQuestions;
-	private Questions currentQuestion;
+
+	public QuestionsSetA[] questionsSetA;
+	private List<QuestionsSetA> unansweredQuestionsSetA;
+	private QuestionsSetA currentQuestionSetA;
+
+	public Image questionImage;
 	private int currentQuestionIndex;
 
-	void Start () {
-		unansweredQuestions = questions.ToList<Questions> ();
+	public bool setA, setB;
 
-		setRandomQuestion ();
-		Debug.Log (currentQuestion.answer);
+	void Start () {
+		unansweredQuestionsSetA = questionsSetA.ToList<QuestionsSetA> ();
+		SetRandomQuestion ();
 	}
 
-	void setRandomQuestion(){
-		currentQuestionIndex = Random.Range (0, unansweredQuestions.Count);
-		currentQuestion = unansweredQuestions[currentQuestionIndex];
+	void SetRandomQuestion() {
+		currentQuestionIndex = Random.Range (0, unansweredQuestionsSetA.Count);
+		currentQuestionSetA = unansweredQuestionsSetA[currentQuestionIndex];
+		questionImage.sprite = currentQuestionSetA.imageQuestionSetA;
+		unansweredQuestionsSetA.RemoveAt (currentQuestionIndex);
+	}
 
-		//unansweredQuestions.RemoveAt (currentQuestionIndex);
+	public void CheckAnswer(int ans) {
+		if(ans == currentQuestionSetA.answerSetA) {
+			Debug.Log ("Correct!");
+			//memo: place score code here
+		} else {
+			Debug.Log ("Wrong!");
+		}
+
+		CheckQuestionList ();
+	}
+
+	void CheckQuestionList (){
+		if (unansweredQuestionsSetA.Count == 0 || unansweredQuestionsSetA == null) {
+			Debug.Log ("Finish!");
+			// SetB
+		} else {
+			SetRandomQuestion ();
+		}
 	}
 }
