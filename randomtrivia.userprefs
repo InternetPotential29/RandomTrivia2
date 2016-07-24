@@ -1,9 +1,11 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
+﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MultipleChoiceQuiz.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ImageAnswerContainer.cs">
     <Files>
-      <File FileName="Assets\Scripts\MultipleChoiceQuiz.cs" Line="16" Column="24" />
+      <File FileName="Assets\Scripts\MultipleChoiceQuiz.cs" Line="92" Column="26" />
       <File FileName="Assets\Scripts\Questions.cs" Line="15" Column="24" />
+      <File FileName="Assets\Scripts\DragHandler.cs" Line="39" Column="2" />
+      <File FileName="Assets\Scripts\ImageAnswerContainer.cs" Line="11" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

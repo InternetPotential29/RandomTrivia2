@@ -11,6 +11,6 @@ public struct QuestionsSetA {
 [System.Serializable]
 
 public struct QuestionsSetB {
-	public string ImageQuestionSetB;
+	public Sprite ImageQuestionSetB;
 	public int answerSetB;
 }
