@@ -3,6 +3,9 @@ using System.Collections;
 using UnityEngine.EventSystems;
 
 public class ImageAnswerContainer : MonoBehaviour, IDropHandler {
+
+	private DragDropQuizUnit1 dragQuiz;
+
 	public GameObject item {
 		get {
 			if (transform.childCount > 0) {
@@ -18,6 +21,8 @@ public class ImageAnswerContainer : MonoBehaviour, IDropHandler {
 	{
 		if (!item) {
 			DragHandler.objectBeingDragged.transform.SetParent (transform);
+			dragQuiz = GameObject.Find("SetC").GetComponent <DragDropQuizUnit1> ();
+			dragQuiz.checkImageAnswer (item);
 		}
 	}
 

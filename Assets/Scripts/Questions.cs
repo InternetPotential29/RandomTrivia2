@@ -14,3 +14,12 @@ public struct QuestionsSetB {
 	public Sprite ImageQuestionSetB;
 	public int answerSetB;
 }
+
+[System.Serializable]
+
+public struct QuestionsSetC {
+	public string QuestionSetC;
+	public Sprite imageGiven1SetC;
+	public Sprite imageGiven2SetC;
+	public string answerSetC;
+}

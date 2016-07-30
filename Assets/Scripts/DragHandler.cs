@@ -23,6 +23,14 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
 	public void OnDrag (PointerEventData eventData) {
 		transform.position = Input.mousePosition;
+		/*int nbTouches = Input.touchCount;
+
+		if (nbTouches > 0) {
+			for (int i = 0; i < nbTouches; i++) {
+				Touch touch = Input.GetTouch (i);
+				transform.position = touch.position;
+			}
+		}*/
 	}
 
 	#endregion
@@ -32,9 +40,9 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 	public void OnEndDrag (PointerEventData eventData) {
 		objectBeingDragged = null;
 		GetComponent<CanvasGroup> ().blocksRaycasts = true;
-		if (transform.parent == destinationPosition) {
+		/*if (transform.parent == destinationPosition) {
 			transform.position = sPosition;
-		}
+		}*/
 	}
 
 	#endregion

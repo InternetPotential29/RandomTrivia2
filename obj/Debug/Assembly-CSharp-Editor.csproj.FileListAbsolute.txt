@@ -27,7 +27,6 @@ C:\Users\Kevin\Documents\randomtrivia\Temp\bin\Debug\Mono.Cecil.Mdb.dll
 C:\Users\Kevin\Documents\randomtrivia\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
 C:\Users\Kevin\Documents\randomtrivia\Temp\bin\Debug\Unity.CecilTools.dll
 C:\Users\Kevin\Documents\randomtrivia\Temp\bin\Debug\Mono.Cecil.Pdb.dll
-C:\Users\Kevin\Documents\randomtrivia\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\Kevin\Documents\randomtrivia\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\Users\Kevin\Documents\randomtrivia\Temp\bin\Debug\UnityEngine.xml
 C:\Users\Kevin\Documents\randomtrivia\Temp\bin\Debug\UnityEditor.xml

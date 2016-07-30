@@ -15,14 +15,20 @@ public class MultipleChoiceQuiz : MonoBehaviour {
 	private List<QuestionsSetB> unansweredQuestionsSetB;
 	private QuestionsSetB currentQuestionSetB;
 
+	private QuizController quizController;
+
 	public GameObject setBButtons;
 
 	public Image questionImage;
 	private int currentQuestionIndex;
 
-	public static bool setA = true, setB = false;
+	public static bool setA = true, setB = false, setC = false;
 
 	void Start () {
+		if (setC == true){
+			quizController = GetComponent <QuizController> ();
+			quizController.transitionToSetC ();
+		}
 		hideDisableSetAButtons ();
 		checkSet ();
 		SetRandomQuestion ();
@@ -89,7 +95,9 @@ public class MultipleChoiceQuiz : MonoBehaviour {
 		if (setB) {
 			if (unansweredQuestionsSetB.Count == 0 || unansweredQuestionsSetB == null) {
 				Debug.Log ("Finish SetB!");
-				// SetC Drag and drop
+				setB = false;
+				setC = true;
+				SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 				// Some kind of transition before starting setC
 			} else {
 				SetRandomQuestion ();
