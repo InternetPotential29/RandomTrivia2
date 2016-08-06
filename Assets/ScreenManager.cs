@@ -8,6 +8,7 @@ public class ScreenManager : MonoBehaviour {
         Unita, Unitb, Unitc, Unitd, 
         U1C1,
         U1C1L1, U1C1L2, U1C1L3,
+        U1C1L1v, U1C1L2v, U1C1L3v,
         U2C1, U2C2, U2C3, U2C4,
         U2C1L1, U2C1L2, U2C1L3, U2C1L4,
         U2C2L1, U2C2L2,
@@ -36,6 +37,9 @@ public class ScreenManager : MonoBehaviour {
         U1C1L1 = GameObject.Find("U1C1L1");
         U1C1L2 = GameObject.Find("U1C1L2");
         U1C1L3 = GameObject.Find("U1C1L3");
+        U1C1L1v = GameObject.Find("U1C1L1v");
+        //U1C1L2v = GameObject.Find("U1C1L2v");
+        //U1C1L3v = GameObject.Find("U1C1L3v");
 
         U2C1 = GameObject.Find("U2C1");
         U2C2 = GameObject.Find("U2C2");
@@ -74,6 +78,9 @@ public class ScreenManager : MonoBehaviour {
         U1C1L1.SetActive(false);
         U1C1L2.SetActive(false);
         U1C1L3.SetActive(false);
+        U1C1L1v.SetActive(false);
+        //U1C1L2v.SetActive(false);
+        //U1C1L3v.SetActive(false);
         U2C1.SetActive(false);
         U2C2.SetActive(false);
         U2C3.SetActive(false);
@@ -196,6 +203,12 @@ public class ScreenManager : MonoBehaviour {
             U2C4L5.SetActive(true);
             U2C4L6.SetActive(true);
         }
+        if(name == "U1C1L1v") {
+            U1C1L1.SetActive(false);
+            U1C1L2.SetActive(false);
+            U1C1L3.SetActive(false);
+            U1C1L1v.SetActive(true);
+        }
     }
     public void BackPress()
     {
@@ -284,6 +297,10 @@ public class ScreenManager : MonoBehaviour {
             U2C4L4.SetActive(false);
             U2C4L5.SetActive(false);
             U2C4L6.SetActive(false);
-        }
+        } 
+    }
+    public void LessonViewer(string lesson_clicked)
+    {
+
     }
 }
