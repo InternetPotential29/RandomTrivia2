@@ -34,6 +34,7 @@ public class DragDropQuizUnit1 : MonoBehaviour {
 	public void checkImageAnswer (GameObject objAnswer) {
 		if (objAnswer.tag == currentQuestionSetC.answerSetC) {
 			Debug.Log ("Correct!");
+			questionText.text = "Correct!";
 			// Animation of Correct (Transition Before next Question)
 		} else {
 			Debug.Log ("Wrong!");
@@ -46,9 +47,13 @@ public class DragDropQuizUnit1 : MonoBehaviour {
 		if (currentQuestionIndex == 1) {
 			Debug.Log ("Finish!");
 		} else {
-			Debug.Log ("WAT");
-			currentQuestionIndex++;
-			SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
+			StartCoroutine (CountToNext ());
 		}
+	}
+
+	IEnumerator CountToNext () {
+		yield return new WaitForSeconds (1.5f);
+		currentQuestionIndex++;
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 	}
 }
