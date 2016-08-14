@@ -23,3 +23,10 @@ public struct QuestionsSetC {
 	public Sprite imageGiven2SetC;
 	public string answerSetC;
 }
+
+[System.Serializable]
+
+public struct Unit2QuestionsSetA {
+	public Sprite unit2ImageGivenSetA;
+	public int unit2AnswerSetA;
+}

@@ -22,15 +22,15 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 	#region IDragHandler implementation
 
 	public void OnDrag (PointerEventData eventData) {
-		transform.position = Input.mousePosition;
-		/*int nbTouches = Input.touchCount;
+		//transform.position = Input.mousePosition;
+		int nbTouches = Input.touchCount;
 
 		if (nbTouches > 0) {
 			for (int i = 0; i < nbTouches; i++) {
 				Touch touch = Input.GetTouch (i);
 				transform.position = touch.position;
 			}
-		}*/
+		}
 	}
 
 	#endregion

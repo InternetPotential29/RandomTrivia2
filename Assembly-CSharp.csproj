@@ -55,6 +55,9 @@
      <Compile Include="Assets\Scripts\Questions.cs" />
      <Compile Include="Assets\Scripts\QuizController.cs" />
      <Compile Include="Assets\Scripts\ScalingGrid.cs" />
+     <Compile Include="Assets\Scripts\Unit2MultipleChoiceQuiz.cs" />
+     <Compile Include="Assets\Scripts\Unit2SetBQuiz.cs" />
+     <Compile Include="Assets\Unit2ImageContainerAnswer.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
