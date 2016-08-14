@@ -1,8 +1,12 @@
-﻿<Properties StartupItem="RandomTrivia.CSharp.Plugins.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ScreenManager.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DragHandler.cs">
     <Files>
-      <File FileName="Assets\ScreenManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DragHandler.cs" Line="33" Column="4" />
+      <File FileName="Assets\Scripts\Unit2MultipleChoiceQuiz.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ImageAnswerContainer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Unit2ImageContainerAnswer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Unit2SetBQuiz.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
