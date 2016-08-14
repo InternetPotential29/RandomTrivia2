@@ -3,18 +3,23 @@ using System.Collections;
 
 public class ScreenManager : MonoBehaviour {
 
-    public GameObject Lessons, Quiz, Trivia, Exit, Back, 
-        QU1, QU2, QU3, QU4, 
-        Unita, Unitb, Unitc, Unitd, 
+    public GameObject Lessons, Quiz, Trivia, Exit, Back,
+        QU1, QU2, QU3, QU4,
+        Unita, Unitb, Unitc, Unitd,
         U1C1,
         U1C1L1, U1C1L2, U1C1L3,
         U1C1L1v, U1C1L2v, U1C1L3v,
         U2C1, U2C2, U2C3, U2C4,
         U2C1L1, U2C1L2, U2C1L3, U2C1L4,
+        U2C1L1v, U2C1L2v, U2C1L3v, U2C1L4v,
         U2C2L1, U2C2L2,
+        U2C2L1v, U2C2L2v,
         U2C3L1, U2C3L2, U2C3L3,
+        U2C3L1v, U2C3L2v, U2C3L3v,
         U2C4L1, U2C4L2, U2C4L3, U2C4L4, U2C4L5, U2C4L6;
+        //U2C4L1v, U2C4L2v, U2C4L3v, U2C4L4v, U2C4L5v, U2C4L6v;
     public string chosen;
+    public string status;
     public void Start()
     {
         Lessons = GameObject.Find("Lessons");
@@ -37,9 +42,9 @@ public class ScreenManager : MonoBehaviour {
         U1C1L1 = GameObject.Find("U1C1L1");
         U1C1L2 = GameObject.Find("U1C1L2");
         U1C1L3 = GameObject.Find("U1C1L3");
-        U1C1L1v = GameObject.Find("U1C1L1v");
-        //U1C1L2v = GameObject.Find("U1C1L2v");
-        //U1C1L3v = GameObject.Find("U1C1L3v");
+        U1C1L1v = GameObject.Find("U1C1L1V");
+        U1C1L2v = GameObject.Find("U1C1L2V");
+        U1C1L3v = GameObject.Find("U1C1L3V");
 
         U2C1 = GameObject.Find("U2C1");
         U2C2 = GameObject.Find("U2C2");
@@ -50,13 +55,22 @@ public class ScreenManager : MonoBehaviour {
         U2C1L2 = GameObject.Find("U2C1L2");
         U2C1L3 = GameObject.Find("U2C1L3");
         U2C1L4 = GameObject.Find("U2C1L4");
+        U2C1L1v = GameObject.Find("U2C1L1V");
+        U2C1L2v= GameObject.Find("U2C1L2V");
+        U2C1L3v = GameObject.Find("U2C1L3V");
+        U2C1L4v = GameObject.Find("U2C1L4V");
 
         U2C2L1 = GameObject.Find("U2C2L1");
         U2C2L2 = GameObject.Find("U2C2L2");
+        U2C2L1v = GameObject.Find("U2C2L1V");
+        U2C2L2v = GameObject.Find("U2C2L2V");
 
         U2C3L1 = GameObject.Find("U2C3L1");
         U2C3L2 = GameObject.Find("U2C3L2");
         U2C3L3 = GameObject.Find("U2C3L3");
+        U2C3L1v = GameObject.Find("U2C3L1V");
+        U2C3L2v = GameObject.Find("U2C3L2V");
+        U2C3L3v = GameObject.Find("U2C3L3V");
 
         U2C4L1 = GameObject.Find("U2C4L1");
         U2C4L2 = GameObject.Find("U2C4L2");
@@ -79,8 +93,8 @@ public class ScreenManager : MonoBehaviour {
         U1C1L2.SetActive(false);
         U1C1L3.SetActive(false);
         U1C1L1v.SetActive(false);
-        //U1C1L2v.SetActive(false);
-        //U1C1L3v.SetActive(false);
+        U1C1L2v.SetActive(false);
+        U1C1L3v.SetActive(false);
         U2C1.SetActive(false);
         U2C2.SetActive(false);
         U2C3.SetActive(false);
@@ -89,17 +103,33 @@ public class ScreenManager : MonoBehaviour {
         U2C1L2.SetActive(false);
         U2C1L3.SetActive(false);
         U2C1L4.SetActive(false);
+        U2C1L1v.SetActive(false);
+        U2C1L2v.SetActive(false);
+        U2C1L3v.SetActive(false);
+        U2C1L4v.SetActive(false);
         U2C2L1.SetActive(false);
         U2C2L2.SetActive(false);
+        U2C2L1v.SetActive(false);
+        U2C2L2v.SetActive(false);
         U2C3L1.SetActive(false);
         U2C3L2.SetActive(false);
         U2C3L3.SetActive(false);
+        U2C3L1v.SetActive(false);
+        U2C3L2v.SetActive(false);
+        U2C3L3v.SetActive(false);
         U2C4L1.SetActive(false);
         U2C4L2.SetActive(false);
         U2C4L3.SetActive(false);
         U2C4L4.SetActive(false);
         U2C4L5.SetActive(false);
         U2C4L6.SetActive(false);
+        /*U2C4L1v.SetActive(false);
+        U2C4L2v.SetActive(false);
+        U2C4L3v.SetActive(false);
+        U2C4L4v.SetActive(false);
+        U2C4L5v.SetActive(false);
+        U2C4L6v.SetActive(false);
+        */
     }
 
     public void CLICK(string name)
@@ -209,6 +239,85 @@ public class ScreenManager : MonoBehaviour {
             U1C1L3.SetActive(false);
             U1C1L1v.SetActive(true);
         }
+        if (name == "U1C1L2v")
+        {
+            U1C1L1.SetActive(false);
+            U1C1L2.SetActive(false);
+            U1C1L3.SetActive(false);
+            U1C1L2v.SetActive(true);
+        }
+        if (name == "U1C1L3v")
+        {
+            U1C1L1.SetActive(false);
+            U1C1L2.SetActive(false);
+            U1C1L3.SetActive(false);
+            U1C1L3v.SetActive(true);
+        }
+        if (name == "U2C1L1v")
+        {
+            U2C1L1.SetActive(false);
+            U2C1L2.SetActive(false);
+            U2C1L3.SetActive(false);
+            U2C1L4.SetActive(false);
+            U2C1L1v.SetActive(true);
+        }
+        if (name == "U2C1L2v")
+        {
+            U2C1L1.SetActive(false);
+            U2C1L2.SetActive(false);
+            U2C1L3.SetActive(false);
+            U2C1L4.SetActive(false);
+            U2C1L2v.SetActive(true);
+        }
+        if (name == "U2C1L3v")
+        {
+            U2C1L1.SetActive(false);
+            U2C1L2.SetActive(false);
+            U2C1L3.SetActive(false);
+            U2C1L4.SetActive(false);
+            U2C1L3v.SetActive(true);
+        }
+        if (name == "U2C1L4v")
+        {
+            U2C1L1.SetActive(false);
+            U2C1L2.SetActive(false);
+            U2C1L3.SetActive(false);
+            U2C1L4.SetActive(false);
+            U2C1L4v.SetActive(true);
+        }
+        if (name == "U2C2L1v")
+        {
+            U2C2L1.SetActive(false);
+            U2C2L2.SetActive(false);
+            U2C2L1v.SetActive(true);
+        }
+        if (name == "U2C2L2v")
+        {
+            U2C2L1.SetActive(false);
+            U2C2L2.SetActive(false);
+            U2C2L2v.SetActive(true);
+        }
+        if (name == "U2C3L1v") 
+        {
+            U2C3L1.SetActive(false);
+            U2C3L2.SetActive(false);
+            U2C3L3.SetActive(false);
+            U2C3L1v.SetActive(true);
+        }
+        if (name == "U2C3L2v")
+        {
+            U2C3L1.SetActive(false);
+            U2C3L2.SetActive(false);
+            U2C3L3.SetActive(false);
+            U2C3L2v.SetActive(true);
+        }
+        if (name == "U2C3L3v")
+        {
+            U2C3L1.SetActive(false);
+            U2C3L2.SetActive(false);
+            U2C3L3.SetActive(false);
+            U2C3L3v.SetActive(true);
+        }
     }
     public void BackPress()
     {
@@ -297,10 +406,88 @@ public class ScreenManager : MonoBehaviour {
             U2C4L4.SetActive(false);
             U2C4L5.SetActive(false);
             U2C4L6.SetActive(false);
-        } 
-    }
-    public void LessonViewer(string lesson_clicked)
-    {
-
+        } else if (U1C1L1v.activeSelf == true)
+        {
+            U1C1L1.SetActive(true);
+            U1C1L2.SetActive(true);
+            U1C1L3.SetActive(true);
+            U1C1L1v.SetActive(false);
+        } else if (U1C1L2v.activeSelf == true)
+        {
+            U1C1L1.SetActive(true);
+            U1C1L2.SetActive(true);
+            U1C1L3.SetActive(true);
+            U1C1L2v.SetActive(false);
+        } else if (U1C1L3v.activeSelf == true)
+        {
+            U1C1L1.SetActive(true);
+            U1C1L2.SetActive(true);
+            U1C1L3.SetActive(true);
+            U1C1L3v.SetActive(false);
+        }
+        else if (U2C1L1v.activeSelf == true)
+        {
+            U2C1L1.SetActive(true);
+            U2C1L2.SetActive(true);
+            U2C1L3.SetActive(true);
+            U2C1L4.SetActive(true);
+            U2C1L1v.SetActive(false);
+        }
+        else if (U2C1L2v.activeSelf == true)
+        {
+            U2C1L1.SetActive(true);
+            U2C1L2.SetActive(true);
+            U2C1L3.SetActive(true);
+            U2C1L4.SetActive(true);
+            U2C1L2v.SetActive(false);
+        }
+        else if (U2C1L3v.activeSelf == true)
+        {
+            U2C1L1.SetActive(true);
+            U2C1L2.SetActive(true);
+            U2C1L3.SetActive(true);
+            U2C1L4.SetActive(true);
+            U2C1L3v.SetActive(false);
+        }
+        else if (U2C1L4v.activeSelf == true)
+        {
+            U2C1L1.SetActive(true);
+            U2C1L2.SetActive(true);
+            U2C1L3.SetActive(true);
+            U2C1L4.SetActive(true);
+            U2C1L4v.SetActive(false);
+        }else if (U2C2L1v.activeSelf == true)
+        {
+            U2C2L1.SetActive(true);
+            U2C2L2.SetActive(true);
+            U2C2L1v.SetActive(false);
+        }
+        else if (U2C2L2v.activeSelf == true)
+        {
+            U2C2L1.SetActive(true);
+            U2C2L2.SetActive(true);
+            U2C2L2v.SetActive(false);
+        }
+        else if (U2C3L1v.activeSelf == true)
+        {
+            U2C3L1.SetActive(true);
+            U2C3L2.SetActive(true);
+            U2C3L3.SetActive(true);
+            U2C3L1v.SetActive(false);
+        }
+        else if (U2C3L2v.activeSelf == true)
+        {
+            U2C3L1.SetActive(true);
+            U2C3L2.SetActive(true);
+            U2C3L3.SetActive(true);
+            U2C3L2v.SetActive(false);
+        }
+        else if (U2C3L3v.activeSelf == true)
+        {
+            U2C3L1.SetActive(true);
+            U2C3L2.SetActive(true);
+            U2C3L3.SetActive(true);
+            U2C3L3v.SetActive(false);
+        }
     }
 }
